@@ -1,3 +1,4 @@
 *.swp
 *.md
+pages
 !pages/example.md
