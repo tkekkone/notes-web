@@ -11,7 +11,7 @@ echo "<script src=\"https://cdn.jsdelivr.net/npm/marked/marked.min.js\"></script
 include ("header.html");
 echo "</head>\n";
 echo "<body>\n";
-echo "<div id=\"navigation\">";
+echo "<div id=\"main\">\n<div id=\"navigation\">";
 $files = glob('pages/*.md');
 foreach($files as $filename)
 {
@@ -19,7 +19,7 @@ foreach($files as $filename)
 	$displayfilename = substr($justfilename, 0, -3);
 	echo "\n<a class=\"pagelinks\" href=# onClick=\"getMarkDown('".$justfilename."')\">".$displayfilename."</a><br>"; 
 }
-echo "\n</div>\n";
+echo "\n</div>\n</div>\n";
 include("body.html");
 echo "<footer>";
 include("footer.html");

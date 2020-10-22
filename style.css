@@ -1,6 +1,38 @@
+body 
+{
+	align-content: center;
+	
+}
+#main
+{
+	margin: auto;
+	width: 80%;	
+}
+#navigation
+{
+	align-content: center;
+	padding-top: 50px;
+	float: left;
+}
+
+#content
+{
+	padding-left: 30px;
+	padding-top: 20px;
+	float:left;
+}
+a
+{
+	text-decoration: none;
+}
 footer {
 	  text-align: center;
-	    padding: 3px;
-	      background-color: DarkSalmon;
-	        color: white;
+	  padding: 3px;
+	  background-color: white;
+	  color: white;
+	   position: fixed;
+	bottom: 0;
+	width: 100%;
+	
 	}
+
