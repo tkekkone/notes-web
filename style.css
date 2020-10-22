@@ -2,6 +2,13 @@ body
 {
 	align-content: center;	
 }
+#content pre
+{
+	font-family: consolas;
+	padding: 5px;
+	border-radius: 5px;
+	background-color: #dddddd;	
+}
 img
 {
 	max-width: 100%;
@@ -51,4 +58,5 @@ footer
 	  bottom: 0;
 	  width: 100%;
 }
+
 

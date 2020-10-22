@@ -10,15 +10,16 @@ if(isset($_GET['page']))
 	}
 	exit();
 }
+$files = listdir_by_date('pages/', ".md");
+$firstpage = array_pop(array_reverse($files));
 echo "<!DOCTYPE html>\n<html>\n<head>\n";
 echo "<link rel=\"stylesheet\" href=\"style.css\">\n";
 echo "<script src=\"https://cdn.jsdelivr.net/npm/marked/marked.min.js\"></script>\n";
 include ("header.html");
 echo "</head>\n";
-echo "<body>\n";
+echo "<body onLoad=\"getMarkDown('".$firstpage."')\">";
 echo "<div id=\"main\">\n<div id=\"navigation\">";
 //$files = glob('pages/*.md');
-$files = listdir_by_date('pages/', ".md");
 foreach($files as $filename)
 {
 	$justfilename = basename($filename);
@@ -27,8 +28,8 @@ foreach($files as $filename)
 }
 echo "\n</div>\n";
 include("body.html");
-echo "</div>";
-echo "<footer>";
+echo "</div>\n";
+echo "<footer>\n";
 include("footer.html");
 echo "</footer>\n";
 echo "</body>\n";
