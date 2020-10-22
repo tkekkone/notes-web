@@ -1,0 +1,14 @@
+<script>
+function getMarkDown(pagename) {
+	var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() 
+	{
+	        if (this.readyState == 4 && this.status == 200) 
+		{
+			document.getElementById("content").innerHTML = marked(this.responseText);
+		}
+	};
+	xhttp.open("GET", "index.php?page="+pagename, true);
+	xhttp.send();
+	}
+</script>
