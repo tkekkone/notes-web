@@ -11,7 +11,14 @@ if(isset($_GET['page']))
 	exit();
 }
 $files = listdir_by_date('pages/', ".md");
-$firstpage = array_pop(array_reverse($files));
+if(isset($_GET['open']))
+{
+	$firstpage=($_GET['open']);
+}
+else
+{
+	$firstpage = array_pop(array_reverse($files));
+}
 echo "<!DOCTYPE html>\n<html>\n<head>\n";
 echo "<link rel=\"stylesheet\" href=\"style.css\">\n";
 echo "<script src=\"https://cdn.jsdelivr.net/npm/marked/marked.min.js\"></script>\n";

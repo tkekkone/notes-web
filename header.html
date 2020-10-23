@@ -6,6 +6,7 @@ function getMarkDown(pagename) {
 	        if (this.readyState == 4 && this.status == 200) 
 		{
 			document.getElementById("content").innerHTML = marked(this.responseText);
+			history.pushState("","","index.php?open="+pagename);
 		}
 	};
 	xhttp.open("GET", "index.php?page="+pagename, true);
