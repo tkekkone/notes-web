@@ -2,6 +2,15 @@ body
 {
 	align-content: center;	
 }
+table
+{
+	background-color: #dddddd;
+}
+table, th, td, tr
+{
+	border-collapse: collapse;
+	border: 1px solid white;
+}
 #content pre
 {
 	font-family: consolas;
