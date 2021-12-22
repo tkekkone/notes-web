@@ -5,7 +5,7 @@ function getMarkDown(pagename) {
 	{
 	        if (this.readyState == 4 && this.status == 200) 
 		{
-			document.getElementById("content").innerHTML = marked(this.responseText);
+			document.getElementById("content").innerHTML = marked.parse(this.responseText);
 			history.pushState("","","index.php?open="+pagename);
 		}
 	};
